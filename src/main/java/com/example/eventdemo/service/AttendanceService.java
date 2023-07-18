@@ -21,7 +21,7 @@ public class AttendanceService {
 
     @EventListener
     public void AttendanceLogic(WatchEvent event) {
-        History.PrimaryKey historyKey = event.getHistoryKey();
+        History.PrimaryKey historyKey = event.historyKey();
         History history= historyRepository.getHistoryByHistoryKey(historyKey);
         log.info("이벤트수신 : " + history.toString());
         Attendance attendance= null;

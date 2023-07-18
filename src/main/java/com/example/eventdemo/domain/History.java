@@ -15,10 +15,10 @@ public class History {
 
     public static History CreateHistory(WatchRequest request){
         History history = new History();
-        PrimaryKey key = new PrimaryKey(request.getStudentId(), request.getLectureId(), request.getWeek(), request.getSequence());
+        PrimaryKey key = new PrimaryKey(request.studentId(), request.lectureId(), request.week(), request.sequence());
         history.setKey(key);
-        history.setWatchedTime(request.getWatchedTime());
-        history.setEntryTime(request.getEntryTime());
+        history.setWatchedTime(request.watchedTime());
+        history.setEntryTime(request.entryTime());
         return history;
     }
 

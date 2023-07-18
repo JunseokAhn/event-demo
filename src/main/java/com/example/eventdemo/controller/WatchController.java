@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WatchController {
     private final HistoryService historyService;
 
-    @GetMapping("/history")
+    @GetMapping("/history/{lectureId}/{studentId}/{week}/{sequence}/{entryTime}/{watchedTime}")
     public String watchHistory (WatchRequest request){
         historyService.watched(request);
         return "redirect://index.html";

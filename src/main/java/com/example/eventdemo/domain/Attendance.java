@@ -1,8 +1,11 @@
 package com.example.eventdemo.domain;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Attendance {
     private PrimaryKey key;
     private long entryTime;
